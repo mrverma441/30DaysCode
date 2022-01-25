@@ -1,0 +1,63 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+class Person
+{
+    private int age;
+    public Person(int initialAge)
+    {
+        if(initialAge>0)
+        {
+            age=initialAge;
+            
+
+        }
+        else if(initialAge<0)
+        {
+            age=0;
+
+            System.out.println("Age is not valid, setting age to 0.");
+
+        }
+    }
+    public void yearPasses()
+    {
+        age=age+1;
+    }
+    public void amIOld()
+    {
+        if(age<13)
+        {
+            System.out.println("You are young.");
+        }
+        else if(age>=13&&age<18)
+        {
+            System.out.println("You are a teenager.");
+        }
+        else
+        {
+            System.out.println("You are old.");
+
+        }
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+     Scanner obj=new Scanner(System.in);
+     int T=obj.nextInt();
+     for(int i=1;i<=T;i++)
+     {
+         int age=obj.nextInt();
+         Person obj2=new Person(age);
+         obj2.amIOld();
+         for(int j=1;j<=3;j++)
+         {
+             obj2.yearPasses();
+         }
+         obj2.amIOld();
+         System.out.println();
+     }
+    }
+}
