@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+
+
+public class Solution {
+    public static void main(String[] args) 
+    {
+        Scanner myobj=new Scanner(System.in);
+        int N=myobj.nextInt();
+        myobj.nextLine();
+        for(int i=0;i<=N-1;i++)
+        {
+            String S=myobj.nextLine();
+            char[] array=S.toCharArray();
+            for(int j=0;j<array.length;j++)
+            {
+                if(j%2==0)
+                {
+                    System.out.print(array[j]);
+                }
+            }
+            System.out.print(" ");
+            for(int j=0;j<array.length;j++)
+            {
+                if(j%2!=0)
+                {
+                    System.out.print(array[j]);
+                }
+            }
+            System.out.println();
+        }
+        
+        
+    }
+}
