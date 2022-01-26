@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner obj=new Scanner(System.in);
+        Map<String,Integer>list1=new HashMap<String,Integer>();
+        int n=obj.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            String name=obj.next();
+            int contact=obj.nextInt();
+            list1.put(name,contact);
+        }
+        while(obj.hasNext())
+        {
+            String s=obj.next();
+            if(list1.containsKey(s))
+            {
+                System.out.println(s+"="+list1.get(s));
+            }else
+            {
+                System.out.println("Not found");
+            }
+            
+        }
+    }
+}
